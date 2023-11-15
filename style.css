@@ -3,15 +3,17 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #5F021F;
     background-image: url("background1.png");
+    background-size: 70%;
+    background-color: #5F021F;
     font-family: 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
 }
 
 .container {
-    margin: 10% auto;
+    margin: 8% auto;
+    margin-bottom: 4%;
 }
 
 button {
@@ -59,7 +61,7 @@ input {
 
 #countdownDisplay {
     color: white; /* Set the text color to white */
-    font-size: 36px; /* Adjust the font size as needed */
+    font-size: 140px; /* Adjust the font size as needed */
     position: absolute;
     top: 50%;
     left: 50%;
