@@ -1,0 +1,25 @@
+<!-- photobooth.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Photobooth</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose a Filter</h1>
+        <div id="cameraContainer">
+            <video id="cameraFeed" autoplay></video>
+            <div id="countdownOverlay">
+                <div id="countdownDisplay"></div>
+            </div>
+        </div>
+        <button onclick="capturePhoto()">Capture Photo</button>
+    </div>
+
+    <script src="photobooth.js"></script>
+    <script src="countdown.js"></script>
+</body>
+</html>

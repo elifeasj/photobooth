@@ -1,0 +1,52 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5F021F;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    margin: 10% auto;
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+form {
+    margin-top: 20px; /* Add space above the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Add space between labels and inputs */
+}
+
+input {
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20%; /* Make input width 100% of the container */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+}
+
+#countdownDisplay {
+    color: #fff; /* Set the text color to white */
+    font-size: 40px; /* Adjust the font size as needed */
+    margin-top: 40px; /* Add some margin to the top of the countdown display */
+}
