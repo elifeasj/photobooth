@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #5F021F;
+    background-image: url("background1.png");
     font-family: 'Poppins', sans-serif;
     color: #fff;
     text-align: center;
@@ -45,8 +46,22 @@ input {
     box-sizing: border-box; /* Include padding and border in the input's total width */
 }
 
+
+#countdownOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity as needed */
+    display: none;
+}
+
 #countdownDisplay {
-    color: #fff; /* Set the text color to white */
-    font-size: 40px; /* Adjust the font size as needed */
-    margin-top: 40px; /* Add some margin to the top of the countdown display */
+    color: white; /* Set the text color to white */
+    font-size: 36px; /* Adjust the font size as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

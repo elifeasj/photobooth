@@ -31,25 +31,40 @@ function capturePhoto() {
     // Store the captured image source
     capturedImageSrc = canvas.toDataURL('image/jpeg');
 
-    // Display a countdown after capturing the photo
-    displayCountdown(3); // Adjust the countdown duration (in seconds)
+    // Start the countdown after capturing the photo
+    startCountdown();
+}
 
-    // Redirect to the preview page
-    setTimeout(() => {
-        window.location.href = `preview.html?capturedImageSrc=${encodeURIComponent(capturedImageSrc)}`;
-    }, 3000); // Adjust the redirect delay (in milliseconds)
+function startCountdown() {
+    displayCountdown(3); // Start the countdown from 3 seconds
 }
 
 function displayCountdown(seconds) {
     let counter = seconds;
 
+    const countdownDisplay = document.getElementById('countdownDisplay');
+
+    // Set up the countdown overlay
+    const countdownOverlay = document.getElementById('countdownOverlay');
+    countdownOverlay.style.display = 'block';
+
     const countdownInterval = setInterval(function () {
-        console.log(counter); // You can replace this with updating a countdown display on your page
+        countdownDisplay.innerText = counter;
 
         if (counter <= 0) {
             clearInterval(countdownInterval);
+            redirectToPreview();
         }
 
         counter--;
     }, 1000); // Update every 1000 milliseconds (1 second)
+}
+
+function redirectToPreview() {
+    // Hide the countdown overlay
+    const countdownOverlay = document.getElementById('countdownOverlay');
+    countdownOverlay.style.display = 'none';
+
+    // Redirect to the preview page
+    window.location.href = `preview.html?capturedImageSrc=${encodeURIComponent(capturedImageSrc)}`;
 }
