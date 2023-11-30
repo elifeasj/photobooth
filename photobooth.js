@@ -23,6 +23,7 @@ function capturePhoto() {
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
 
+
     // Set canvas dimensions to match the video feed
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -30,10 +31,18 @@ function capturePhoto() {
     // Draw the current video frame onto the canvas
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
+     // Apply the frame
+     const frame = new Image();
+     frame.src = "/frame1.png"; // Replace with the path to your frame image
+     context.drawImage(frame, 0, 0, canvas.width, canvas.height);
+
     // Store the captured image source
     capturedImageSrc = canvas.toDataURL('image/jpeg');
 
     console.log('Captured Image Source:', capturedImageSrc); // Add this line
+    console.log('Frame drawn on canvas:', frame.width, frame.height);
+
+
 
     // Ensure the countdown overlay is displayed
     displayCountdown(3);
@@ -64,3 +73,5 @@ function redirectToNumber() {
     console.log('Redirecting to number.html'); // Add this line
     window.location.href = `number.html?capturedImageSrc=${encodeURIComponent(capturedImageSrc)}`;
 }
+
+

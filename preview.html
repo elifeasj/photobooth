@@ -8,17 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>HENT DIT BILLEDE</h1>
+        <h1 class="previewpicture-h1">HENT DIT BILLEDE</h1>
         <img id="capturedImage" alt="Captured Photo">
-        <form>
-            <label for="postageNumber"><b>INDTAST POSTNUMMER</b></label>
-            <input type="text" id="postageNumber" name="postageNumber" required>
-            
-            <label for="email"><b>INDTAST EMAIL</b></label>
-            <input type="text" id="email" name="email" required>
+        <form class="forms">
+            <div class="form-flex-1">
+                <label for="postageNumber"><b>INDTAST POSTNUMMER</b></label>
+                <input type="text" id="postageNumber" name="postageNumber">
+            </div>
+            <div class="form-flex-2">
+                <label for="email"><b>INDTAST EMAIL</b></label>
+                <input type="text" id="email" name="email">\
+            </div>
             <br>
-            <button class="default-button" type="button" onclick="navigateToFinal()">HENT BILLEDE</button>
         </form>
+        <button class="default-button" type="button" onclick="navigateToFinal()">HENT BILLEDE</button>
     </div>
 
     <script src="preview.js"></script>

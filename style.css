@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-    margin: 8% auto;
+    margin: 0% auto;
     margin-bottom: 4%;
 }
 
@@ -33,25 +33,42 @@ button:hover {
 
 form {
     margin-top: 20px; /* Add space above the form */
+    /* display: grid; */
 }
 
 label {
-    display: block;
-    margin-bottom: 8px; /* Add space between labels and inputs */
+    margin-bottom: 3px; /* Add space between labels and inputs */
     font-size: 40px;
 }
 
 input {
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 30%; /* Make input width 100% of the container */
+    padding: 30px;
+    /* margin: 1% 35% 2% 35%; */
+    width: 100%;  /* Make input width 100% of the container */
     box-sizing: border-box; /* Include padding and border in the input's total width */
+    margin-top: 40px;
+}
+
+.forms{
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-flex-1{
+    width: 50%;
+    margin: 0% 2% 0% 20%;
+}
+
+.form-flex-2{
+    width: 50%;
+    margin: 0% 20% 0% 2%;
 }
 
 
+
 img{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     width: 80%;
     height: 80%;
 }
@@ -71,18 +88,22 @@ img{
     color: white; /* Set the text color to white */
     font-size: 200px; /* Adjust the font size as needed */
     position: absolute;
-    top: 48%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #cameraFeed{
-    width: 75%;
-    height: 75%;
+    width: 60%;
+}
+
+#capturedImage{
+    width: 55%;
 }
 
 .logo{
     width: 50%;
+    margin-top: 110px;
 }
 
 
@@ -142,6 +163,14 @@ h1{
     font-size: 100px;
 }
 
+.previewpicture-h1{
+    font-size: 100px;
+}
+
+.chooseframe-h1{
+    font-size: 70px;
+}
+
 .number {
     display: inline-block;
     width: 260px;
@@ -165,13 +194,14 @@ h1{
 .age-container-body {
     /* display: flex;
     align-items: center;
-    justify-content: center; */
-    height: 100vh;
+    justify-content: center;
+    height: 100vh; */
     background-color: #5F021F;
     color: #fff;
     font-family: 'Poppins', sans-serif;
     /* margin: 5em 5em 5em 5em; */
     width: 100%;
+    margin-top: 20em;
 }
 
 .age-container {
@@ -299,6 +329,27 @@ h1{
 
 .default-button{
     display: inline-block;
-    font-size: 55px;
-    margin-top: 5em;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+/* frame */
+
+#cameraContainer {
+    position: relative;
+}
+
+#frameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow interactions with the video beneath */
+}
+
+#frameOverlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adjust as needed */
 }

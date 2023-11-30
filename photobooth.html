@@ -9,10 +9,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>VÆLG DIN JULE RAMME</h1>
+        <h1 class="chooseframe-h1">VÆLG DIN JULE RAMME</h1>
         <div id="cameraContainer">
             <video id="cameraFeed" autoplay></video>
-            <!-- Inside your photobooth.html file -->
+
+            <div id="frameOverlay">
+                <!-- You can customize the frame image and styles -->
+                <img src="frame1.png" alt="Frame">
+            </div>
+            <!-- countdown overlay -->
             <div id="countdownOverlay">
                 <div id="countdownDisplay"></div>
             </div>
