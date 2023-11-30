@@ -1,3 +1,4 @@
+// final.js
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve the captured image source from the URL
     const urlParams = new URLSearchParams(window.location.search);

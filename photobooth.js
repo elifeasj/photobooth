@@ -17,6 +17,8 @@ function startCamera() {
 }
 
 function capturePhoto() {
+    console.log('Capture Photo button clicked'); // Add this line
+
     const video = document.getElementById('cameraFeed');
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
@@ -31,12 +33,10 @@ function capturePhoto() {
     // Store the captured image source
     capturedImageSrc = canvas.toDataURL('image/jpeg');
 
-    // Start the countdown after capturing the photo
-    startCountdown();
-}
+    console.log('Captured Image Source:', capturedImageSrc); // Add this line
 
-function startCountdown() {
-    displayCountdown(3); // Start the countdown from 3 seconds
+    // Ensure the countdown overlay is displayed
+    displayCountdown(3);
 }
 
 function displayCountdown(seconds) {
@@ -53,18 +53,14 @@ function displayCountdown(seconds) {
 
         if (counter <= 0) {
             clearInterval(countdownInterval);
-            redirectToPreview();
+            redirectToNumber(); // Assuming you want to redirect after the countdown
         }
 
         counter--;
     }, 1000); // Update every 1000 milliseconds (1 second)
 }
 
-function redirectToPreview() {
-    // Hide the countdown overlay
-    const countdownOverlay = document.getElementById('countdownOverlay');
-    countdownOverlay.style.display = 'none';
-
-    // Redirect to the preview page
-    window.location.href = `preview.html?capturedImageSrc=${encodeURIComponent(capturedImageSrc)}`;
+function redirectToNumber() {
+    console.log('Redirecting to number.html'); // Add this line
+    window.location.href = `number.html?capturedImageSrc=${encodeURIComponent(capturedImageSrc)}`;
 }
